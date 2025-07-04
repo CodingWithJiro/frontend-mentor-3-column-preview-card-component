@@ -1,0 +1,390 @@
+/* || RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+/* || FONTS */
+@font-face {
+  font-display: swap;
+  font-family: "Lexend Deca";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/lexend-deca-v24-latin-regular.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Big Shoulders";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../assets/fonts/big-shoulders-v3-latin-500.woff2") format("woff2");
+}
+
+/* || VARIABLES */
+/* CHANGE THE DATA BELOW AS NEEDED */
+:root {
+  /* FONTS */
+  --FF: "Lexend Deca", sans-serif;
+  --FF-TITLE: "Big Shoulders", sans-serif;
+  --FS: 1rem;
+
+  /* COLORS */
+  --BGCOLOR: hsl(0, 0%, 95%);
+  --BGCOLOR-CARD-1: hsl(31, 77%, 52%);
+  --BGCOLOR-CARD-2: hsl(184, 100%, 22%);
+  --BGCOLOR-CARD-3: hsl(179, 100%, 13%);
+  --BGCOLOR-CARD-CTA: hsl(0, 0%, 95%);
+  --BGCOLOR-CARD-CTA-HOVER: transparent;
+  --FONT-COLOR: hsla(0, 0%, 100%, 0.75);
+  --FONT-COLOR-CARD-ICON-SEDANS: #ffd473;
+  --FONT-COLOR-CARD-ICON-SUVS: #26b5c0;
+  --FONT-COLOR-CARD-ICON-LUXURY: #19b89d;
+  --FONT-COLOR-CARD-TITLE: hsl(0, 0%, 95%);
+  --FONT-COLOR-CARD-CTA-SEDANS: hsl(31, 77%, 52%);
+  --FONT-COLOR-CARD-CTA-SUVS: hsl(184, 100%, 22%);
+  --FONT-COLOR-CARD-CTA-LUXURY: hsl(179, 100%, 13%);
+  --FONT-COLOR-CARD-CTA-HOVER: hsl(0, 0%, 95%);
+  --BORDER-COLOR-CARD-CTA: transparent;
+  --BORDER-COLOR-CARD-CTA-HOVER: hsl(0, 0%, 95%);
+
+  /* THEME TOGGLE COLORS */
+  --FONT-COLOR-THEME-ICON-LIGHT: hsl(0, 0%, 20%);
+  --BGCOLOR-THEME-BUTTON: hsl(0, 0%, 90%);
+  --BGCOLOR-THEME-BUTTON-AFTER: hsl(0, 0%, 20%);
+  --BORDER-COLOR-THEME-BUTTON: hsl(0, 0%, 80%);
+  --SHADOW-COLOR-THEME: rgba(0, 0, 0, 0.15);
+
+  /* BORDERS */
+  --BORDER-THEME-BUTTON: 1px solid var(--BORDER-COLOR-THEME-BUTTON);
+  --BORDER-CARD-CTA: 3px solid var(--BORDER-COLOR-CARD-CTA);
+  --BORDER-CARD-CTA-HOVER: 3px solid var(--BORDER-COLOR-CARD-CTA-HOVER);
+
+  /* SHADOWS */
+  --BOX-SHADOW-THEME: 0 0 3px var(--SHADOW-COLOR-THEME);
+}
+
+/* || UTILITY CLASSES */
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.dark {
+  --BGCOLOR: #1c1c1e;
+  --BGCOLOR-CARD-1: hsl(31, 65%, 48%);
+  --BGCOLOR-CARD-2: hsl(184, 70%, 26%);
+  --BGCOLOR-CARD-3: hsl(179, 70%, 18%);
+  --BGCOLOR-CARD-CTA: #e0e0e0;
+  --BGCOLOR-CARD-CTA-HOVER: transparent;
+  --FONT-COLOR: hsla(0, 0%, 90%, 0.9);
+  --FONT-COLOR-CARD-TITLE: hsl(0, 0%, 98%);
+  --FONT-COLOR-CARD-ICON-SEDANS: #fbd393;
+  --FONT-COLOR-CARD-ICON-SUVS: #69d6dd;
+  --FONT-COLOR-CARD-ICON-LUXURY: #5ee3c4;
+  --FONT-COLOR-CARD-CTA-SEDANS: hsl(31, 65%, 48%);
+  --FONT-COLOR-CARD-CTA-SUVS: hsl(184, 70%, 26%);
+  --FONT-COLOR-CARD-CTA-LUXURY: hsl(179, 70%, 18%);
+  --FONT-COLOR-CARD-CTA-HOVER: hsl(0, 0%, 98%);
+  --BORDER-COLOR-CARD-CTA: transparent;
+  --BORDER-COLOR-CARD-CTA-HOVER: hsl(0, 0%, 98%);
+
+  /* THEME TOGGLE COLORS */
+  --FONT-COLOR-THEME-ICON-DARK: #e6e6e6;
+  --BGCOLOR-THEME-BUTTON: #2a2a2d;
+  --BGCOLOR-THEME-BUTTON-AFTER: #dcdcdc;
+  --BORDER-COLOR-THEME-BUTTON: #555;
+  --SHADOW-COLOR-THEME: rgba(255, 255, 255, 0.15);
+}
+
+/* || GENERAL STYLES */
+html {
+  font-size: var(--FS);
+  font-family: var(--FF);
+  background-color: var(--BGCOLOR);
+}
+
+body {
+  color: var(--FONT-COLOR);
+  min-height: 100vh;
+}
+
+/* || HEADER */
+.theme {
+  box-shadow: var(--BOX-SHADOW-THEME);
+  background-color: transparent;
+  border-radius: 50px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5em 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.theme__button {
+  border: var(--BORDER-THEME-BUTTON);
+  background-color: var(--BGCOLOR-THEME-BUTTON);
+  border-radius: 100px;
+  width: 2.5rem;
+  height: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.theme__button::after {
+  content: "";
+  background-color: var(--BGCOLOR-THEME-BUTTON-AFTER);
+  position: absolute;
+  left: 0;
+  top: 0.225rem;
+  bottom: 0.225rem;
+  width: 1rem;
+  border-radius: 100px;
+  transform: translateX(0.2rem);
+}
+
+.theme__button.active::after {
+  transform: translateX(1.1rem);
+}
+
+.theme__icon {
+  width: 18px;
+}
+
+.theme__icon--light {
+  color: var(--FONT-COLOR-THEME-ICON-LIGHT);
+}
+
+.theme__icon--dark {
+  color: var(--FONT-COLOR-THEME-ICON-DARK);
+}
+
+/* || MAIN */
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__container {
+  padding: 4rem 1.5rem;
+}
+
+.main__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card {
+  padding: 1.5em;
+  max-width: 28.75rem;
+}
+
+.card:nth-child(1) {
+  background-color: var(--BGCOLOR-CARD-1);
+}
+.card:nth-child(2) {
+  background-color: var(--BGCOLOR-CARD-2);
+}
+.card:nth-child(3) {
+  background-color: var(--BGCOLOR-CARD-3);
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2em;
+  margin-bottom: 1.75em;
+}
+
+.card__icon--sedans {
+  color: var(--FONT-COLOR-CARD-ICON-SEDANS);
+}
+
+.card__icon--suvs {
+  color: var(--FONT-COLOR-CARD-ICON-SUVS);
+}
+
+.card__icon--luxury {
+  color: var(--FONT-COLOR-CARD-ICON-LUXURY);
+}
+
+.card__title {
+  font-family: var(--FF-TITLE);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--FONT-COLOR-CARD-TITLE);
+  font-size: 2.375rem;
+}
+
+.card__description {
+  font-size: 0.9375rem;
+  line-height: 1.675;
+  margin-bottom: 1.55em;
+}
+
+.card__cta {
+  background-color: var(--BGCOLOR-CARD-CTA);
+  font-size: 0.965rem;
+  padding: 0.8em 1.85em;
+  border-radius: 100px;
+  border: var(--BORDER-CARD-CTA);
+  user-select: none;
+  cursor: pointer;
+}
+
+.card__cta[aria-label$="Sedans"] {
+  color: var(--FONT-COLOR-CARD-CTA-SEDANS);
+}
+
+.card__cta[aria-label$="SUVs"] {
+  color: var(--FONT-COLOR-CARD-CTA-SUVS);
+}
+
+.card__cta[aria-label$="Luxury"] {
+  color: var(--FONT-COLOR-CARD-CTA-LUXURY);
+}
+
+.card__cta:hover {
+  color: var(--FONT-COLOR-CARD-CTA-HOVER);
+  border: var(--BORDER-CARD-CTA-HOVER);
+  background-color: var(--BGCOLOR-CARD-CTA-HOVER);
+}
+
+/* || MEDIA QUERY (DEVICE WIDTH) */
+@media screen and (min-width: 23.4375rem) {
+  /* || MAIN */
+  .card {
+    padding: 3em;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  /* || MAIN */
+  .main__card-wrapper {
+    flex-direction: row;
+    max-width: 57.5rem;
+    margin-top: 2.65em;
+  }
+
+  .card {
+    flex: 1;
+  }
+
+  .card__description {
+    margin-bottom: 5.45em;
+  }
+}
+
+/* || MEDIA QUERY (REDUCED MOTION) */
+/* CHANGE THE DATA BELOW AS NEEDED */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease-in-out, color 0.15s ease-in-out;
+  }
+
+  .card {
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .card__title,
+  .card__icon {
+    transition: color 0.15s ease-in-out;
+  }
+
+  .card__cta {
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+  }
+
+  .theme {
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .theme__button::after {
+    transition: transform 0.15s ease-in-out;
+  }
+
+  .theme__icon {
+    animation: fadeIn 0.2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    animation: none !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0.001ms !important;
+    transition: none !important;
+    caret-color: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+}
