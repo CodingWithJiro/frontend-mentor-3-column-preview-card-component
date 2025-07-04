@@ -17,6 +17,7 @@
 ![Dark Mode](https://img.shields.io/badge/Dark--Mode-Available-111?style=for-the-badge&logo=halfbrickstudios&logoColor=white)
 [![Google Lighthouse](https://img.shields.io/badge/Lighthouse-Audit-00B0FF?style=for-the-badge&logo=lighthouse&logoColor=white)](./assets/downloads/lighthouse-performance-report.pdf)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f85948f5-ee12-499d-94a8-2b718589657b/deploy-status)](https://three-column-preview-card-fm-jiro.netlify.app/)
 ![Status](https://img.shields.io/badge/status-complete-brightgreen)
 ![Learning Path](https://img.shields.io/badge/learning%20path-month%204-blue)
 ![Views](https://visitor-badge.laobi.icu/badge?page_id=CodingWithJiro.3-column-preview-card-component&left_text=repo%20views)
@@ -59,10 +60,10 @@ Accessibility is also integrated with proper ARIA labels and a screen reader-onl
 
 ## 🧠 What I Learned
 
-- How to implement a **simple theme toggle** with `localStorage`, `matchMedia`, and `.classList.toggle()`
+- How to implement a **simple theme toggle** with `localStorage`, `matchMedia`, and `.classList.toggle()` using minimal JavaScript
 - Gained practical experience using **CSS custom properties** for both light and dark themes
 - Understood the use of **`meta name="robots"`** and **`link rel="canonical"`** tags for better SEO
-- Learned to sometimes **ignore style guide font-weight suggestions** where I used `font-weight: 500` for `Big Shoulders` instead of `font-weight: 700` because the design preview clearly showed a thinner visual.
+- Learned to sometimes **ignore style guide font-weight suggestions** where I used `font-weight: 500` for `Big Shoulders` instead of `font-weight: 700` because the design preview clearly showed a thinner visual
 - Improved my **semantic HTML structure** by focusing on clean document flow
 
 ---
@@ -94,7 +95,7 @@ Accessibility is also integrated with proper ARIA labels and a screen reader-onl
 
 ## 🌐 Live Demo
 
-Or you can check out the 👉 [live website here](LINK)
+Or you can check out the 👉 [live website here](https://three-column-preview-card-fm-jiro.netlify.app/)
 
 ---
 
@@ -111,10 +112,3 @@ Created by **Elmar Chavez**
 🗓️ Month/Year: **July 2025**
 
 📚 Journey: **4<sup>th</sup>** month of learning _frontend web development_.
-
-<!--
-
-FRONTEND MENTOR TAGS:
-html css vscode git github netlify 4th-month frontend-mentor project perfectpixel lighthouse theme-toggle
-
--->
