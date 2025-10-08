@@ -1,4 +1,4 @@
-# 💻 3-Column Preview Card Component
+# 3-Column Preview Card Component
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -22,7 +22,7 @@
 ![Learning Path](https://img.shields.io/badge/learning%20path-month%204-blue)
 ![Views](https://visitor-badge.laobi.icu/badge?page_id=CodingWithJiro.3-column-preview-card-component&left_text=repo%20views)
 
-## ℹ️ A Responsive 3-Column Preview Card Component for a Car Company
+## A Responsive 3-Column Preview Card Component for a Car Company
 
 | _Mobile Preview (375x812)_                                   | _Desktop Preview (1440x960)_                                    |
 | ------------------------------------------------------------ | --------------------------------------------------------------- |
@@ -31,11 +31,11 @@
 
 A 3-column card component which showcases three car categories using flexbox and custom utility styles and enhanced with a dark mode toggle.
 
-Created as part of the building challenges from [Frontend Mentor](https://www.frontendmentor.io/).
+Created as part of the building challenges from **[Frontend Mentor](https://www.frontendmentor.io/)**.
 
 ---
 
-## 🔍 Overview
+## Overview
 
 This project replicates a card component layout based on a JPG design file. It includes visually distinct cards with their own color themes, interactive hover states, and a built-in dark mode. Layouts adapt from mobile-first to desktop using media queries and flexbox logic.
 
@@ -43,7 +43,7 @@ Accessibility is also integrated with proper ARIA labels and a screen reader-onl
 
 ---
 
-## ✨ Features
+## Features
 
 - Fully responsive layout (mobile-first)
 - Dark Mode toggle with `localStorage` persistence
@@ -54,11 +54,11 @@ Accessibility is also integrated with proper ARIA labels and a screen reader-onl
 - Descriptive button `aria-label` usage
 - Minimal JS used only for theme behavior
 - Google Lighthouse tested and passed
-- Pixel-perfect matching via [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonecod/dkaagdgjmgdmbnecmcefdhjekcoceebi) Chrome extension
+- Pixel-perfect matching via **[PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonecod/dkaagdgjmgdmbnecmcefdhjekcoceebi)** Chrome extension
 
 ---
 
-## 🧠 What I Learned
+## What I Learned
 
 - How to implement a **simple theme toggle** with `localStorage`, `matchMedia`, and `.classList.toggle()` using minimal JavaScript
 - Gained practical experience using **CSS custom properties** for both light and dark themes
@@ -68,7 +68,7 @@ Accessibility is also integrated with proper ARIA labels and a screen reader-onl
 
 ---
 
-## 🛠️ Tech Used
+## Tech Used
 
 - HTML5
 - CSS3
@@ -79,36 +79,36 @@ Accessibility is also integrated with proper ARIA labels and a screen reader-onl
 
 ---
 
-## 🎨 Design Reference & Tools
+## Design Reference & Tools
 
 - JPG design image
 - PerfectPixel
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. Clone the repository
 2. Open `index.html` in your browser
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
-Or you can check out the 👉 [live website here](https://three-column-preview-card-fm-jiro.netlify.app/)
-
----
-
-## 📊 Performance Report
-
-A **Google Lighthouse** audit was conducted on the final version of this project. You can view the full report [here](./assets/downloads/lighthouse-performance-report.pdf).
+Or you can check out the **[live website here](https://three-column-preview-card-fm-jiro.netlify.app/)**
 
 ---
 
-## 🧑‍💻 Author
+## Performance Report
+
+A **Google Lighthouse** audit was conducted on the final version of this project. You can view the **[full report here](./assets/downloads/lighthouse-performance-report.pdf)**.
+
+---
+
+## Author
 
 Created by **Elmar Chavez**
 
-🗓️ Month/Year: **July 2025**
+Month/Year: **July 2025**
 
-📚 Journey: **4<sup>th</sup>** month of learning _frontend web development_.
+Journey: **4<sup>th</sup>** month of learning _frontend web development_.
